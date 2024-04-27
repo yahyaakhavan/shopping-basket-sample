@@ -1,0 +1,18 @@
+Description
+
+This project is a sample front-end web application focused on JavaScript, with HTML and CSS for structure and styling. It simulates a shopping basket where users can add items, view their total price, and remove items. Local storage is used to persist the basket state across sessions, and Babel is utilized to ensure JavaScript compatibility with older browsers.
+
+Features
+
+- Adding items to the basket: Users can add items to the shopping basket by clicking on the "Add to Basket" button.
+- Viewing total price: The application calculates and displays the total price of all items in the basket.
+- Removing items from the basket: Users can remove items from the basket by clicking on the "Remove" button next to each item.
+- Local storage: The application utilizes local storage to persist the basket state, allowing users to revisit the page and find their previous selections intact.
+- Babel integration: JavaScript code is transpiled using Babel to ensure compatibility with older browsers.
+
+Technologies Used
+
+- HTML: Used for structuring the content and layout of the web page.
+- CSS: Used for styling the appearance and design of the web page.
+- JavaScript: Used for implementing the shopping basket functionality, interactivity, and local storage.
+- Babel: Used for transpiling JavaScript code to ensure compatibility with older browsers.
