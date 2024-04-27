@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <title>Shopping_Basket</title>
+  </head>
+  <body>
+    <div style="display: grid; height: 100%">
+      <div class="basket--window modal modal--deactive">
+        <div class="basket--window__container">
+          <span class="basket--window__header">YourCart</span>
+          <div class="basket--window__body">
+            <div class="basket__emptyimg">
+              <img src="./Assets/Img/cart_empty.png" alt="" />
+            </div>
+            <ul class="basket__items">
+              <!-- <li class="basket__item">
+                <span class="basket__itempic"
+                  ><img src="./Assets/Img/hp_small.png" alt=""
+                /></span>
+                <span class="basket__itemtitle"
+                  ><span class="basket__itemname">hp</span>
+                  <span class="basket__itemprice">100</span>
+                </span>
+                <span class="basket__itemNo"
+                  ><span class="basket__itemNo__increase"
+                    ><img src="./Assets/Img/arrow-up-2.svg" alt="" /></span
+                  ><span class="basket__itemNo__no">1</span
+                  ><span class="basket__itemNo__decrease"
+                    ><img src="./Assets/Img/arrow-down-1.svg" alt="" /></span
+                ></span>
+                <span class="basket__itemdelete"
+                  ><img src="./Assets/Img/trash.svg" alt=""
+                /></span>
+                <span>total_row</span>
+              </li>
+              <li class="basket__item">
+                <span class="basket__itempic"
+                  ><img src="./Assets/Img/hp_small.png" alt=""
+                /></span>
+                <span class="basket__itemtitle"
+                  ><span class="basket__itemname"
+                    >Asus VivoBook Slim I9 cpu</span
+                  >
+                  <span class="basket__itemprice">100</span>
+                </span>
+                <span class="basket__itemNo"
+                  ><span class="basket__itemNo__increase"
+                    ><img src="./Assets/Img/arrow-up-2.svg" alt="" /></span
+                  ><span class="basket__itemNo__no">1</span
+                  ><span class="basket__itemNo__decrease"
+                    ><img src="./Assets/Img/arrow-down-1.svg" alt="" /></span
+                ></span>
+                <span class="basket__itemdelete"
+                  ><img src="./Assets/Img/trash.svg" alt=""
+                /></span>
+              </li> -->
+            </ul>
+            <br />
+            <div class="basket__total">TOTAL</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal addproduct--form modal--deactive">
+        <div class="product--form__container" style="border: none">
+          <form action="">
+            <div class="form__item">
+              <span class="form__lbl">
+                <label for="productID">productID: </label>
+                <label for="productName">productName: </label>
+                <label for="productPrice">productPrice: </label>
+                <label for="productimg">productimg: </label>
+                <label for="unitinstock">unitinstock:</label>
+                <label for="category">category:</label>
+              </span>
+              <span class="form__txt">
+                <input id="productID" type="text" readonly />
+                <input id="productName" type="text" />
+                <input id="productPrice" type="text" />
+                <input id="productimg" type="text" />
+                <input id="unitinstock" type="text" />
+                <select name="" id="categorydropdown" autocomplete="off">
+                  <option value="0" selected>All</option>
+                  <option value="1">Watch</option>
+                  <option value="2">Notebook</option>
+                  <option value="3">HDD</option>
+                </select>
+              </span>
+            </div>
+            <div class="form__btn">
+              <button class="button closeform" type="button">close</button>
+              <button class="button addproduct" type="button">add</button>
+              <button class="button editproduct" type="button">edit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="main">
+        <div class="container_header">
+          <div class="header container">
+            <span class="header__item action_basket">
+              <span class="header__item-counter">0</span>
+              <img src="./Assets/Img/bag-happy.svg" alt="basket"
+            /></span>
+            <span class="header__item">YAHYA_Shopping</span>
+            <span class="header__item menu_div">
+              <img src="./Assets/Img/menu.svg" alt="menu"
+            /></span>
+          </div>
+          <div class="heade__pagetitle">
+            <button class="button newproduct__btn">Create New Product</button>
+            <div class="header__search">
+              <span class="search__byname"
+                ><input
+                  class="search__input"
+                  type="text"
+                  placeholder="Search Product"
+              /></span>
+              <span class="search__bycat"
+                ><button class="category">All</button
+                ><button class="category">Watch</button
+                ><button class="category">Notebook</button
+                ><button class="category">HDD</button></span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="body container">
+          <ul class="products_list">
+            <!-- <li class="product">
+              <span class="product__img"
+                ><img src="./Assets/Img/Mac.jpg" alt="apple_notebook"
+              /></span>
+              <span class="product__detail">
+                <span class="product__title">MacBook Pro 13"</span>
+                <span class="product__desc">
+                  The new M2 chip makes the 13‑inch MacBook Pro more capable
+                  than ever.
+                </span>
+
+                <span class="product__price">7.99</span>
+
+                <span class="product__detail--btn button2">add to cart</span>
+              </span>
+            </li>
+            <li class="product">
+              <span class="product__img"
+                ><img src="./Assets/Img/Asus 1.png" alt="asus_notebook" />
+              </span>
+              <span class="product__detail">
+                <span class="product__title"
+                  >ASUS Zenbook Pro 14 Duo OLED (UX8402)</span
+                >
+                <span class="product__desc">
+                  Windows 11 Pro Intel® Core™ i9-13900H <br />A powerhouse that
+                  lets you turn up your creative powers to the max.
+                </span>
+
+                <span class="product__price">7.99</span>
+
+                <span class="product__detail--btn button2">add to cart</span>
+              </span>
+            </li>
+            <li class="product">
+              <span class="product__img"
+                ><img src="./Assets/Img/hp_1.png" alt="hp_notebook"
+              /></span>
+              <span class="product__detail">
+                <span class="product__title">HP Pavilion plus 14</span>
+                <span class="product__desc">
+                  Windows 11 home AMD Ryzen 5 processor Intel® Celeron™ and i3
+                  Processors available
+                </span>
+
+                <span class="product__price">7.99</span>
+
+                <span class="product__detail--btn button2">add to cart</span>
+              </span>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./resources/JavaScriptFile.js"></script>
+</html>

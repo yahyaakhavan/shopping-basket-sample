@@ -1,0 +1,11 @@
+/* Body_Font */
+@font-face {
+  font-family: Estedat_Body;
+  src: url(../Assets/Fonts/fonts/webfonts/statics/Estedad-Regular.woff2);
+}
+
+/* Heading_Font */
+@font-face {
+  font-family: Estedat_H;
+  src: url(../Assets/Fonts/fonts/webfonts/statics/Estedad-Bold.woff2);
+}

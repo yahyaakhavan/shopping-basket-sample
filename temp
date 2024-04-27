@@ -1,0 +1,107 @@
+<span class="form__item">
+  <input id="productID" type="text" />
+  <label for="productID">productID: </label></span
+>
+<span class="form__item">
+  <input id="productName" type="text" />
+  <label for="productName">productName: </label></span
+>
+<span class="form__item">
+  <input id="productPrice" type="text" />
+  <label for="productPrice">productPrice: </label></span
+>
+
+<div class="basket--window modal modal--deactive">
+  <div class="basket--window__container">
+    <span class="basket--window__header">YourCart</span>
+    <div class="basket--window__body">
+      <ul class="basket__items">
+        <!-- <li class="basket__item">
+          <span class="basket__itempic"
+            ><img src="./Assets/Img/hp_small.png" alt=""
+          /></span>
+          <span class="basket__itemtitle"
+            ><span class="basket__itemname">hp</span>
+            <span class="basket__itemprice">100</span>
+          </span>
+          <span class="basket__itemNo"
+            ><span class="basket__itemNo__increase"
+              ><img src="./Assets/Img/arrow-up-2.svg" alt="" /></span
+            ><span class="basket__itemNo__no">1</span
+            ><span class="basket__itemNo__decrease"
+              ><img src="./Assets/Img/arrow-down-1.svg" alt="" /></span
+          ></span>
+          <span class="basket__itemdelete"
+            ><img src="./Assets/Img/trash.svg" alt=""
+          /></span>
+          <span>total_row</span>
+        </li>
+        <li class="basket__item">
+          <span class="basket__itempic"
+            ><img src="./Assets/Img/hp_small.png" alt=""
+          /></span>
+          <span class="basket__itemtitle"
+            ><span class="basket__itemname"
+              >Asus VivoBook Slim I9 cpu</span
+            >
+            <span class="basket__itemprice">100</span>
+          </span>
+          <span class="basket__itemNo"
+            ><span class="basket__itemNo__increase"
+              ><img src="./Assets/Img/arrow-up-2.svg" alt="" /></span
+            ><span class="basket__itemNo__no">1</span
+            ><span class="basket__itemNo__decrease"
+              ><img src="./Assets/Img/arrow-down-1.svg" alt="" /></span
+          ></span>
+          <span class="basket__itemdelete"
+            ><img src="./Assets/Img/trash.svg" alt=""
+          /></span>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="modal addproduct--form modal--deactive">
+  <div class="product--form__container">
+    <form action="">
+      <div class="form__item">
+        <span class="form__lbl">
+          <label for="productID">productID: </label>
+          <label for="productName">productName: </label>
+          <label for="productPrice">productPrice: </label>
+          <label for="productimg">productimg: </label>
+          <label for="unitinstock">unitinstock:</label></span
+        >
+        <span class="form__txt">
+          <input id="productID" type="text" readonly />
+          <input id="productName" type="text" />
+          <input id="productPrice" type="text" />
+          <input id="productimg" type="text" />
+          <input id="unitinstock" type="text" />
+        </span>
+      </div>
+      <div class="form__btn">
+        <button class="button closeform" type="button">close</button>
+        <button class="button addproduct" type="button">add</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+==>increaseFunction( const checkbasket = utility.readfromlocalstorage("basket");
+const productFrombasket = checkbasket.find((item) => { return item.id ==
+e.target.dataset.product_id; }); const checkProducts =
+utility.readfromlocalstorage("Products"); const productFromStock =
+checkProducts.find((item) => { return item.id == e.target.dataset.product_id;
+}); const i = checkProducts.findIndex((it) => { return it.id ==
+e.target.dataset.product_id; }); console.log(i); if (productFrombasket.qty + 1
+<= productFromStock.UnitInStock) { productFrombasket.qty++;
+productFromStock.UnitInStock--; checkProducts.splice(
+checkProducts.findIndex((it) => { return it.id == e.target.dataset.product_id;
+}), 1 ); checkProducts.push(productFromStock);
+utility.addRemoveTotally("Products", checkProducts); checkbasket.splice(
+checkbasket.findIndex((it) => { return it.id == e.target.dataset.product_id; }),
+1 ); checkbasket.push(productFrombasket); utility.addRemoveTotally("basket",
+checkbasket); const correctQTY = document.getElementById(
+String(e.target.dataset.product_id) ); correctQTY.innerHTML =
+Number(correctQTY.innerHTML) + 1; })
